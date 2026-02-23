@@ -1,0 +1,86 @@
+@layer tokens {
+  :root {
+    /* ---------- BRAND ---------- */
+    --brand-h: 250;
+    --brand-c: 0.18;
+
+    --brand-1: oklch(95% var(--brand-c) var(--brand-h));
+    --brand-2: oklch(85% var(--brand-c) var(--brand-h));
+    --brand-3: oklch(70% var(--brand-c) var(--brand-h));
+    --brand-4: oklch(55% var(--brand-c) var(--brand-h));
+
+    /* ---------- NEUTRALS ---------- */
+    --bg: oklch(99% 0 0);
+    --surface: oklch(96% 0 0);
+    --text: oklch(18% 0 0);
+    --muted: oklch(55% 0 0);
+    --border: oklch(88% 0 0);
+
+    /* ---------- TYPOGRAPHY ---------- */
+    --fs-xs: clamp(0.75rem, 0.7vw, 0.875rem);
+    --fs-sm: clamp(0.875rem, 0.9vw, 1rem);
+    --fs-md: clamp(1rem, 1.1vw, 1.125rem);
+    --fs-lg: clamp(1.25rem, 1.6vw, 1.5rem);
+    --fs-xl: clamp(2rem, 4vw, 3rem);
+
+    --lh-tight: 1.15;
+    --lh-base: 1.5;
+    --lh-loose: 1.75;
+
+    /* ---------- DENSITY ---------- */
+    --density: 1;
+
+    /* ---------- SPACING ---------- */
+    --s-1: calc(clamp(0.25rem, 0.5vw, 0.5rem) * var(--density));
+    --s-2: calc(clamp(0.5rem, 1vw, 1rem) * var(--density));
+    --s-3: calc(clamp(1rem, 2vw, 1.5rem) * var(--density));
+    --s-4: calc(clamp(1.5rem, 3vw, 2.5rem) * var(--density));
+    --s-5: calc(clamp(2.5rem, 5vw, 4rem) * var(--density));
+
+    /* ---------- RADIUS ---------- */
+    --r-sm: 0.375rem;
+    --r-md: 0.75rem;
+    --r-lg: 1.25rem;
+    --r-pill: 999px;
+
+    /* ---------- SHADOWS ---------- */
+    --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.08);
+    --shadow-md: 0 6px 20px oklch(0% 0 0 / 0.12);
+    --shadow-lg: 0 16px 40px oklch(0% 0 0 / 0.16);
+
+    /* ---------- MOTION ---------- */
+    --dur-fast: 120ms;
+    --dur-base: 200ms;
+    --dur-slow: 360ms;
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ---------- Z ---------- */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-modal: 1000;
+    --z-toast: 1100;
+
+    /* ---- GAME SPECIFIC ---- */
+    --board-size: 3;
+    --square-font-size: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: oklch(15% 0 0);
+      --surface: oklch(22% 0 0);
+      --text: oklch(92% 0 0);
+      --muted: oklch(65% 0 0);
+      --border: oklch(30% 0 0);
+    }
+  }
+
+  /* Density modes */
+  [data-density='compact'] {
+    --density: 0.75;
+  }
+  [data-density='comfortable'] {
+    --density: 1.15;
+  }
+}

@@ -1,0 +1,42 @@
+@layer base {
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif;
+    font-size: var(--fs-md);
+    line-height: var(--lh-base);
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  h1 {
+    font-size: var(--fs-xl);
+    line-height: var(--lh-tight);
+  }
+
+  h2 {
+    font-size: var(--fs-lg);
+  }
+  h3 {
+    font-size: var(--fs-md);
+  }
+
+  p {
+    max-width: 65ch;
+  }
+
+  a {
+    color: var(--brand-4);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

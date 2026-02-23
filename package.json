@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write \"src/*.+(js|jsx|json|yml|yaml|css|md|ts|tsx)\""
+    "format": "prettier --write \"src/*.+(js|jsx|json|yml|yaml|css|md|ts|tsx|css)\""
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -20,6 +20,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
+    "autoprefixer": "^10.4.24",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",

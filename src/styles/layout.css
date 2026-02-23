@@ -1,0 +1,54 @@
+@import './tokens.css';
+
+@layer layout {
+  .container {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+  }
+
+  .center {
+    display: grid;
+    place-items: center;
+  }
+
+  .grid {
+    min-width: 500px;
+    min-height: 500px;
+    display: inline-grid;
+    background-color: green;
+  }
+
+  .grid-gap-s3 {
+    gap: var(--s-3);
+  }
+
+  .grid-dynamic-columns {
+    grid-template-columns: repeat(var(--board-size), 1fr);
+    grid-template-rows: repeat(var(--board-size), 1fr);
+  }
+
+  .square {
+    min-width: 30px;
+    min-height: 30px;
+    font-size: var(--square-size);
+    border: 1px solid var(--border);
+    container-type: inline-size;
+    container-name: square;
+  }
+
+  @container square (width > 40px) {
+    .square > p {
+      font-size: 50cqi;
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    padding: var(--s-1) var(--s-2);
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+  }
+}
