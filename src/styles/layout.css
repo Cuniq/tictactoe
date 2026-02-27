@@ -15,7 +15,6 @@
     min-width: 500px;
     min-height: 500px;
     display: inline-grid;
-    background-color: green;
   }
 
   .grid-gap-s3 {
@@ -27,18 +26,31 @@
     grid-template-rows: repeat(var(--board-size), 1fr);
   }
 
+  @container square (width > 40px) {
+    .square > p {
+      font-size: clamp(1.5rem, 60cqi, 6rem);
+    }
+  }
+
   .square {
+    --bg: var(--brand-4);
+    --flash-delta: 0;
     min-width: 30px;
     min-height: 30px;
-    font-size: var(--square-size);
     border: 1px solid var(--border);
     container-type: inline-size;
     container-name: square;
+
+    background-color: oklch(from var(--bg) calc(l - var(--flash-delta)) c h);
+
+    &.highlight {
+      animation: flash 1s ease-in-out;
+    }
   }
 
-  @container square (width > 40px) {
-    .square > p {
-      font-size: 50cqi;
+  @keyframes flash {
+    from {
+      --flash-delta: 1;
     }
   }
 

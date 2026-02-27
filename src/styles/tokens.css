@@ -1,8 +1,8 @@
 @layer tokens {
   :root {
     /* ---------- BRAND ---------- */
-    --brand-h: 250;
-    --brand-c: 0.18;
+    --brand-h: 135;
+    --brand-c: 0.35;
 
     --brand-1: oklch(95% var(--brand-c) var(--brand-h));
     --brand-2: oklch(85% var(--brand-c) var(--brand-h));
@@ -63,7 +63,12 @@
 
     /* ---- GAME SPECIFIC ---- */
     --board-size: 3;
-    --square-font-size: 1rem;
+  }
+
+  @property --flash-delta {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
   }
 
   @media (prefers-color-scheme: dark) {
